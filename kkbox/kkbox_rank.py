@@ -39,6 +39,6 @@ print("Songs: ", len(song_dict))
 sorted_songs = sorted(song_dict, key=song_dict.get, reverse=False)
 with open("./kkbox_songs_tw.txt", "w") as f:
 	for song in sorted_songs:
-		line = "{}\t{}\t{}\t{}\t{}".format(song, pair_dict[song][0], pair_dict[song][1], pair_dict[song][2], pair_dict[song][3])
+		line = "{}\t{}\t{}\t{}\t{}\n".format(song, pair_dict[song][0], pair_dict[song][1], pair_dict[song][2], pair_dict[song][3])
 		# print(line)
 		f.write(line)

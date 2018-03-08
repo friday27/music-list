@@ -9,7 +9,7 @@ start = datetime.now()
 # browser = webdriver.Chrome()
 # browser.get("http://www.baidu.com/")
 
-day365 = pd.date_range("3/7/2017", periods=365, freq='D')
+day365 = pd.date_range("10/18/2017", periods=365, freq='D')
 day365 = [day.strftime("%Y-%m-%d") for day in day365]
 
 for day in day365:
@@ -27,8 +27,8 @@ for day in day365:
 		for i in range(len(songs)):
 			song = songs[i].split("-")[0].split("(")[0].strip()
 			singer = singers[i].split(",")
-			singer_1 = singer[0].split("(")[0].strip()
-			singer_2 = singer[1].split("(")[0].strip() if len(singer) > 1 else ""
+			singer_1 = singer[0].strip()
+			singer_2 = singer[1].strip() if len(singer) > 1 else ""
 			line = "{}\t{}\t{}\n".format(song, singer_1, singer_2)
 			# print(line)
 			f.write(line)
